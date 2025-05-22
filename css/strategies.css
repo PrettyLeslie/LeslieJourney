@@ -1,0 +1,155 @@
+.strat {
+  background-color: #f8d6b5;
+  padding: 6rem 1.5rem; /* Reduced from 240px to rem units */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.stra {
+  color: #b36920;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem; /* Added font-size */
+}
+
+.strategies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-content: center;
+  padding: 0 1rem; /* Added side padding */
+}
+
+.strategy-card {
+  background: #fff8f0;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(255, 182, 109, 0.1);
+  padding: 1.5rem 1.2rem;
+  max-width: 300px;
+  min-width: 220px;
+  flex: 1 1 220px;
+  transition: all 0.3s ease-out;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+/* Animation delay for cards */
+.strategy-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.strategy-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.strategy-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.strategy-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.strategy-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(255, 182, 109, 0.18);
+}
+
+.strategy-card h3 {
+  color: #b36920;
+  font-size: 1.15rem;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.strategy-card i {
+  color: #ffb66d;
+  font-size: 1.3rem;
+}
+
+.strategy-card p {
+  color: #614312;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.6; /* Improved readability */
+}
+
+/* Tablet Responsive (768px - 1024px) */
+@media (max-width: 900px) {
+  .strat {
+    padding: 4rem 1.5rem;
+  }
+
+  .stra {
+    font-size: 2rem;
+  }
+
+  .strategies-list {
+    gap: 1.2rem;
+  }
+
+  .strategy-card {
+    max-width: 45%; /* Two cards per row */
+    min-width: 250px;
+  }
+}
+
+/* Mobile Responsive (up to 767px) */
+@media (max-width: 767px) {
+  .strat {
+    padding: 3rem 1rem;
+  }
+
+  .stra {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .strategies-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .strategy-card {
+    max-width: 100%;
+    width: 100%;
+    min-width: auto;
+    animation-delay: 0.1s !important; /* Same delay for all cards on mobile */
+  }
+
+  .strategy-card:hover {
+    transform: translateY(-3px) scale(1.01); /* More subtle hover on mobile */
+  }
+}
+
+/* Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .strat {
+    padding: 2.5rem 0.8rem;
+  }
+
+  .stra {
+    font-size: 1.6rem;
+  }
+
+  .strategy-card {
+    padding: 1.2rem 1rem;
+  }
+
+  .strategy-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .strategy-card p {
+    font-size: 0.95rem;
+  }
+}
